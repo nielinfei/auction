@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 显示公司信息 -->
+	<!-- 包是必须的, struts-default必须写 -->
+	<package name="root" extends="struts-default">
+		<global-results>
+			<result name="error">/jsp/error.jsp</result>
+		</global-results>
+		<action name="*demo" class="web.action.DemoAction" method="{1}">
+			<!-- 默认是转发，type="dispatch" 重定向，type="redirect" -->
+			<result name="list">/jsp/index.jsp</result>
+			<result name="edit">/jsp/demo-add.jsp</result>
+		</action>
+	</package>
+
+</struts>
